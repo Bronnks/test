@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'hello.apps.HelloConfig',
+    'players.apps.PlayersConfig',
+    'vehicles.apps.VehiclesConfig',
+    'achievements.apps.AchievementsConfig',
 ]
 
 MIDDLEWARE = [
@@ -75,6 +78,14 @@ WSGI_APPLICATION = 'simple_app.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    'default2': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mydatabase',
+        'USER': 'myuser',
+        'PASSWORD': 'mypassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    },
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
